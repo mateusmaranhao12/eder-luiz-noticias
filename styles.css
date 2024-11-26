@@ -1,0 +1,237 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.navbar-custom {
+    background-color: #00264e;
+    padding: 20px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .dropdown-toggle {
+    color: white !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: rgb(0, 110, 255);
+    text-decoration: none;
+}
+
+
+.navbar-custom .dropdown-menu {
+    background-color: #ffffff;
+}
+
+.navbar-custom .dropdown-item {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-custom .dropdown-item:hover {
+    background-color: #0056b3;
+    color: #FFF;
+}
+
+.navbar-toggler-visible {
+    display: block !important;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.carousel-section {
+    margin-top: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 400px;
+    /* Altura fixa */
+    object-fit: cover;
+    /* Garante que a imagem fique ajustada */
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.img1 {
+    max-height: 100%;
+}
+
+.image-real-container {
+    position: relative;
+}
+
+.image-real-container img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-real-container .text-overlay {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    padding: 5px;
+}
+
+.image-real-container .top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.image-real-container .bottom {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-real-container img {
+    display: block;
+    width: 100%;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.image-real-container:hover img {
+    filter: brightness(0.85);
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.image-container:hover img {
+    filter: brightness(0.85);
+}
+
+.text-overlay {
+    position: absolute;
+    color: white;
+    /* Cor do texto */
+    font-weight: bold;
+    /* Texto em negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.text-overlay.top-left {
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    gap: 15px;
+}
+
+.fa-circle-play {
+    cursor: pointer;
+}
+
+.text-overlay.bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+}
+
+.cards-noticias .card-title {
+    color: rgb(49, 0, 112);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.responsive-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+    /* Limita a largura do texto */
+    word-wrap: break-word;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .responsive-text {
+        font-size: 0.575rem;
+        /* Diminui a fonte em telas menores */
+    }
+}
+
+.cards-especial-publicitario .card-categoria {
+    color: rgb(32, 0, 148);
+    text-transform: uppercase;
+}
+
+.cards-especial-publicitario .card-title {
+    color: black;
+}
+
+.anuncio img {
+    border-radius: 0;
+}
+
+.numero-mais-lida {
+    color: rgb(177, 177, 177);
+    font-weight: bold;
+}
+
+.noticias-lidas .list-group-item {
+    color: #1e00a5;
+    font-weight: 600;
+}
+
+.redes-sociais {
+    background-color: #0b003d;
+    color: white;
+    padding: 40px;
+}
+
+.redes-sociais .btn-outline-light {
+    border-radius: 50px;
+}
