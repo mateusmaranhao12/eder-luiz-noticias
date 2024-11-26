@@ -235,3 +235,55 @@ img {
 .redes-sociais .btn-outline-light {
     border-radius: 50px;
 }
+
+.videos {
+    background-color: #2e2e2e;
+    padding: 30px;
+}
+
+.videos h6,
+small {
+    color: white;
+    font-weight: bold;
+}
+
+.videos span {
+    text-transform: uppercase;
+}
+
+.videos p {
+    font-weight: 100;
+}
+
+.brasil-e-o-mundo {
+    background-color: #0e0042;
+    color: white;
+    padding: 20px;
+}
+
+.brasil-e-o-mundo .titulo {
+    font-weight: bold;
+}
+
+.brasil-e-o-mundo .card-categoria {
+    text-transform: uppercase;
+    color: rgb(32, 0, 148);
+    font-weight: bold;
+}
+
+.brasil-e-o-mundo h5 {
+    color: black;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    padding: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #25007c;
+    /* Cor ao passar o mouse */
+}
