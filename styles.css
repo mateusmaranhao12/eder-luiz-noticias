@@ -351,6 +351,16 @@ small {
     padding: 20px;
 }
 
+.esportes .card-categoria {
+    color:rgb(32, 0, 148);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.esportes .card-title {
+    color: rgb(0, 0, 0);
+}
+
 .ultimas-noticias h2 {
     color: black;
 }
