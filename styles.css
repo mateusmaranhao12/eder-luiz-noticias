@@ -271,6 +271,10 @@ small {
     font-weight: bold;
 }
 
+.brasil-e-o-mundo h3 {
+    color: white;
+}
+
 .brasil-e-o-mundo h5 {
     color: black;
 }
@@ -286,4 +290,125 @@ small {
 .carousel-control-next-icon:hover {
     background-color: #25007c;
     /* Cor ao passar o mouse */
+}
+
+.saude-e-beleza h6 {
+    color:rgb(32, 0, 148);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nossos-grupos {
+    background-color: #0b003d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nossos-grupos h4 {
+    color: white;
+}
+
+.nossos-grupos .btn-outline-light {
+    border-radius: 50px;
+}
+
+.nossos-grupos {
+    margin-bottom: 20px;
+}
+
+.saude-e-beleza .anuncio img {
+    height: 100%; /* Ocupa toda a altura disponível */
+    width: 100%; /* Mantém largura responsiva */
+    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+}
+
+.saude-e-beleza  .anuncio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Ajusta a altura do contêiner ao restante da coluna */
+}
+
+.saude-e-beleza .col-md-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.saude-e-beleza .col-md-8 > .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.saude-e-beleza .col-md-8 .card {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.esportes {
+    background-color: #0e0042;
+    color: white;
+    padding: 20px;
+}
+
+.ultimas-noticias h2 {
+    color: black;
+}
+
+.ultimas-noticias .categoria {
+    color:rgb(32, 0, 148);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ultimas-noticias .data {
+    color:rgb(117, 117, 117);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ultimas-noticias .titulo-noticia {
+    color: black;
+}
+
+.card-ultimas-noticias {
+    background-color: #FFF;
+    padding: 20px;
+}
+
+.footer {
+    background-color: rgb(24, 24, 24);
+    padding: 20px;
+}
+
+.footer p {
+    color: #FFF;
+}
+
+.footer h4 {
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer a {
+    color: gray;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .redes-sociais-footer a {
+    color: white;
+}
+
+.footer .segunda-linha-footer {
+    border-top: 1px solid gray;
+}
+
+.footer .segunda-linha-footer p {
+    color: rgb(187, 187, 187);
 }
