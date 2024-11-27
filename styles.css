@@ -412,3 +412,9 @@ small {
 .footer .segunda-linha-footer p {
     color: rgb(187, 187, 187);
 }
+
+/*Offcanvas*/
+.offcanvas a:hover {
+    background-color: #001f83;
+    transition: .2s ease;
+}
