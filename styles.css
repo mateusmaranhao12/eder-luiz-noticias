@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(245, 245, 245);
 }
 
 .navbar-custom {
@@ -69,6 +69,10 @@ body {
 
 .carousel-indicators .active {
     background-color: #007bff;
+}
+
+.carousel-inner img {
+    border-radius: 0px;
 }
 
 img {
@@ -179,6 +183,10 @@ img {
 
 .card {
     border: none;
+}
+
+.card img {
+    border-radius: 10px;
 }
 
 .cards-noticias .card-title {
@@ -428,3 +436,65 @@ small {
     background-color: #001f83;
     transition: .2s ease;
 }
+
+/*Noticia*/
+
+.texto-noticia .texto-categoria {
+    color:rgb(32, 0, 148);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.texto-noticia .titulo {
+    color:rgb(0, 0, 0);
+}
+
+.texto-noticia .paragrafo {
+    color:rgb(116, 116, 116);
+}
+
+.noticia-redes-sociais {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.noticia-redes-sociais small {
+    color: rgb(175, 175, 175);
+}
+
+.noticia h6 {
+    font-weight: bold;
+}
+
+.noticia small {
+    color: rgb(119, 119, 119);
+    font-weight: 400;
+}
+
+.noticia i {
+    cursor: pointer;
+    color: black;
+}
+
+.noticia .links-uteis-botao {
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 107);
+    color: rgb(0, 0, 107);
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.noticia .card-categoria {
+    color:rgb(0, 0, 107);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.noticia .card-title {
+    color: black;
+}
+

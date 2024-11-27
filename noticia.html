@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <!-- Bootstrap JS (com Popper incluído no bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <!-- Primeiro Menu hambúrguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Segundo Menu hambúrguer (visível sempre) -->
+            <button class="navbar-toggler-visible ms-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Texto "Eder Luiz" -->
+            <a class="navbar-brand ms-2" href="#"><img src="./imgs/logo.png" style="height: 50px;"
+                    class="img-fluid"></a>
+
+            <!-- Links de navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Dropdown Notícias -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Notícias
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="editoria.html">Todas</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Destaque</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Estado</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Região</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Política</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Esporte</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Brasil e Mundo</a></li>
+                            <li><a class="dropdown-item" href="editoria.html">Saúde e Beleza</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html">Destaques</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html">Saúde e Beleza</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html">O Melhor daqui</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html">Vídeos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html">Regiões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="editoria.html"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel" style="background-color: #00155c;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house"></i>
+                        Início</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="editoria.html"><i
+                            class="fa-solid fa-check-to-slot"></i>Classificados</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="editoria.html"><i
+                            class="fa-solid fa-briefcase"></i>
+                        Empregos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="editoria.html"><i
+                            class="fa-solid fa-user-xmark"></i> VC
+                        Repórter</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="editoria.html"><i
+                            class="fa-solid fa-users"></i>
+                        Parceiros</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="editoria.html"><i
+                            class="fa-solid fa-bullhorn"></i>
+                        Anuncie</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="editoria.html"><i
+                            class="fa-solid fa-user"></i>
+                        Contato</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Carousel-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <section class="carousel-section">
+                    <div id="bootstrapCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicadores (bolinhas) -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="noticia.html">
+                                    <img src="./imgs/1.jpg" class="d-block w-100" alt="Slide 1"
+                                        style="height: 400px; object-fit: cover;">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="noticia.html">
+                                    <img src="./imgs/2.jpg" class="d-block w-100" alt="Slide 1"
+                                        style="height: 400px; object-fit: cover;">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="noticia.html">
+                                    <img src="./imgs/3.png" class="d-block w-100" alt="Slide 1"
+                                        style="height: 400px; object-fit: cover;">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Controles de Navegação -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#bootstrapCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#bootstrapCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!--Texto noticia-->
+    <div class="container texto-noticia">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mt-5">
+                    <small class="mb-3 texto-categoria">Categoria</small>
+                    <h2 class="titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis imperdiet
+                        odio, a lobortis justo lacinia in. Nullam vitae accumsan sapien.</h2>
+                    <p class="paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis imperdiet
+                        odio, a lobortis
+                        justo lacinia in. Nullam vitae accumsan sapien. Donec ac efficitur dui, in hendrerit nibh. Nulla
+                        facilisi. Nulla tempus convallis velit. Curabitur sed turpis erat. Aliquam gravida lorem ac
+                        placerat rutrum. Sed in dignissim felis. Nulla facilisi. Nam ornare orci quis aliquet bibendum.
+                        Sed quis sem suscipit, ullamcorper libero non, ultricies erat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="noticia container">
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <img class="img-fluid w-100" src="./imgs/noticia.jpg" alt="Notícia">
+                <div class="d-flex justify-content-end">
+                    <small class="text-dark" style="font-weight: 300;">Foto: Lucas Silva</small>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h6 class="text-dark">Autor - <span style="font-weight: 400;">Site</span></h6>
+                        <small class="mt-2">15/10/2024 às 10:30</small>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-3 me-5">
+                                <h5>Compartilhe: </h5>
+                            </div>
+                            <div class="col-md-2">
+                                <h5><i class="fa-brands fa-whatsapp"></i></h5>
+                            </div>
+                            <div class="col-md-2">
+                                <h5><i class="fa-brands fa-facebook"></i></h5>
+                            </div>
+                            <div class="col-md-2">
+                                <h5><i class="fa-brands fa-twitter"></i></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis imperdiet
+                        odio, a lobortis
+                        justo lacinia in. Nullam vitae accumsan sapien. Donec ac efficitur dui, in hendrerit nibh. Nulla
+                        facilisi. Nulla tempus convallis velit. Curabitur sed turpis erat. Aliquam gravida lorem ac
+                        placerat rutrum. Sed in dignissim felis. Nulla facilisi. Nam ornare orci quis aliquet bibendum.
+                        Sed quis sem suscipit, ullamcorper libero non, ultricies erat. Phasellus laoreet diam tortor, a
+                        elementum ante sodales ut. Ut accumsan urna eu quam scelerisque, vitae finibus felis suscipit.
+                        In hac habitasse platea dictumst.
+
+                        Aenean tincidunt diam vel sem suscipit, sit amet sollicitudin massa porttitor. Morbi tellus
+                        ante, lacinia consectetur euismod at, maximus ut metus. Sed dignissim arcu eu fringilla
+                        scelerisque. Morbi elementum dolor at maximus molestie. Fusce vel erat quis neque rutrum
+                        porttitor vel vitae orci. Donec sit amet ultrices odio. Aliquam posuere neque quis odio
+                        faucibus, lacinia scelerisque magna sodales. Suspendisse in felis vulputate, imperdiet leo sit
+                        amet, feugiat lectus. Nulla facilisi. Suspendisse ornare tortor at nunc lacinia feugiat. Ut
+                        dictum, nisi sed ultrices pellentesque, mauris leo accumsan eros, a imperdiet turpis turpis quis
+                        lorem. Aenean consequat libero ullamcorper, tristique tortor eget, mollis mauris. Mauris
+                        condimentum placerat risus.
+
+                        Vestibulum vestibulum purus ex. Suspendisse ligula lectus, facilisis nec feugiat eu, bibendum ac
+                        mi. Suspendisse potenti. Sed eleifend, nisl vitae tempus varius, ante lectus tempus neque, eget
+                        commodo ante arcu at erat. Cras cursus elit ac porttitor ornare. Fusce sodales at nisi ac
+                        elementum. Curabitur consectetur interdum tellus, quis congue urna placerat quis. Vestibulum
+                        malesuada, nunc ut efficitur viverra, nulla augue aliquam ipsum, ut sagittis est diam nec lorem.
+                        Mauris gravida risus odio, nec finibus risus volutpat ut. Integer porta neque at nibh venenatis
+                        luctus. Integer pulvinar ex a lorem vestibulum, ac tincidunt ipsum feugiat. Duis tempor
+                        dignissim elit eu rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                        fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <!--Carousel-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <section class="carousel-section">
+                                    <div id="bootstrapCarousel2" class="carousel slide" data-bs-ride="carousel">
+                                        <!-- Indicadores (bolinhas) -->
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#bootstrapCarousel2"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#bootstrapCarousel2"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#bootstrapCarousel2"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+
+                                        <!-- Slides -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <a href="noticia.html">
+                                                    <img src="./imgs/1.jpg" class="d-block w-100" alt="Slide 1"
+                                                        style="height: 400px; object-fit: cover;">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <a href="noticia.html">
+                                                    <img src="./imgs/2.jpg" class="d-block w-100" alt="Slide 1"
+                                                        style="height: 400px; object-fit: cover;">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <a href="noticia.html">
+                                                    <img src="./imgs/3.png" class="d-block w-100" alt="Slide 1"
+                                                        style="height: 400px; object-fit: cover;">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Controles de Navegação -->
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#bootstrapCarousel2" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Anterior</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#bootstrapCarousel2" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Próximo</span>
+                                        </button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis imperdiet
+                        odio, a lobortis
+                        justo lacinia in. Nullam vitae accumsan sapien. Donec ac efficitur dui, in hendrerit nibh. Nulla
+                        facilisi. Nulla tempus convallis velit. Curabitur sed turpis erat. Aliquam gravida lorem ac
+                        placerat rutrum. Sed in dignissim felis. Nulla facilisi. Nam ornare orci quis aliquet bibendum.
+                        Sed quis sem suscipit, ullamcorper libero non, ultricies erat. Phasellus laoreet diam tortor, a
+                        elementum ante sodales ut. Ut accumsan urna eu quam scelerisque, vitae finibus felis suscipit.
+                        In hac habitasse platea dictumst.
+
+                        Aenean tincidunt diam vel sem suscipit, sit amet sollicitudin massa porttitor. Morbi tellus
+                        ante, lacinia consectetur euismod at, maximus ut metus. Sed dignissim arcu eu fringilla
+                        scelerisque. Morbi elementum dolor at maximus molestie. Fusce vel erat quis neque rutrum
+                        porttitor vel vitae orci. Donec sit amet ultrices odio. Aliquam posuere neque quis odio
+                        faucibus, lacinia scelerisque magna sodales. Suspendisse in felis vulputate, imperdiet leo sit
+                        amet, feugiat lectus. Nulla facilisi. Suspendisse ornare tortor at nunc lacinia feugiat. Ut
+                        dictum, nisi sed ultrices pellentesque, mauris leo accumsan eros, a imperdiet turpis turpis quis
+                        lorem. Aenean consequat libero ullamcorper, tristique tortor eget, mollis mauris. Mauris
+                        condimentum placerat risus.
+
+                        Vestibulum vestibulum purus ex. Suspendisse ligula lectus, facilisis nec feugiat eu, bibendum ac
+                        mi. Suspendisse potenti. Sed eleifend, nisl vitae tempus varius, ante lectus tempus neque, eget
+                        commodo ante arcu at erat. Cras cursus elit ac porttitor ornare. Fusce sodales at nisi ac
+                        elementum. Curabitur consectetur interdum tellus, quis congue urna placerat quis. Vestibulum
+                        malesuada, nunc ut efficitur viverra, nulla augue aliquam ipsum, ut sagittis est diam nec lorem.
+                        Mauris gravida risus odio, nec finibus risus volutpat ut. Integer porta neque at nibh venenatis
+                        luctus. Integer pulvinar ex a lorem vestibulum, ac tincidunt ipsum feugiat. Duis tempor
+                        dignissim elit eu rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                        fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="links-uteis col-md-12">
+                    <small>Links úteis:</small>
+                    <p>Nos siga no <a class="links-uteis-botao" href=""><img style="height: 20px; margin-bottom: 2px;"
+                                class="img-fluid" src="./imgs/google-icon.svg">
+                            Google News</a></p>
+                    <p>Participe do nosso grupo no <a class="links-uteis-botao" href=""><img
+                                style="height: 20px; margin-bottom: 2px;" class="img-fluid"
+                                src="./imgs/WhatsApp_icon.png">
+                            WhatsApp</a> ou no <a class="links-uteis-botao" href=""><img
+                                style="height: 20px; margin-bottom: 2px;" class="img-fluid"
+                                src="./imgs/telegram-2019.svg">
+                            Telegram</a></p>
+                </div>
+
+                <!--Carousel-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <section class="carousel-section">
+                                <div id="bootstrapCarousel3" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- Indicadores (bolinhas) -->
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#bootstrapCarousel3" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#bootstrapCarousel3" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#bootstrapCarousel3" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+
+                                    <!-- Slides -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <a href="noticia.html">
+                                                <img src="./imgs/1.jpg" class="d-block w-100" alt="Slide 1"
+                                                    style="height: 400px; object-fit: cover;">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a href="noticia.html">
+                                                <img src="./imgs/2.jpg" class="d-block w-100" alt="Slide 1"
+                                                    style="height: 400px; object-fit: cover;">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a href="noticia.html">
+                                                <img src="./imgs/3.png" class="d-block w-100" alt="Slide 1"
+                                                    style="height: 400px; object-fit: cover;">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Controles de Navegação -->
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#bootstrapCarousel3" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Anterior</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#bootstrapCarousel3" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Próximo</span>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="col-md-4">
+                <div class="noticia-redes-sociais mb-3">
+                    <div class="mb-4">
+                        <small>Redes Sociais</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-brands fa-facebook fa-2x"></i>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                            <i class="fa-brands fa-facebook fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="anuncio mt-2 mb-2">
+                    <a href="noticia.html">
+                        <img src="./imgs/anuncio4.jpg" class="img-fluid"
+                            style="max-width: 100%; max-height: 500px; object-fit: contain;" alt="Anúncio">
+                    </a>
+                </div>
+                <div class="noticias-lidas">
+                    <div class="mais-lidas mt-5 mb-5">
+                        <div class="card">
+                            <div class="card-header">
+                                Mais lidas do dia
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <a href="noticia.html" style="text-decoration: none;">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <span class="numero-mais-lida me-3">1</span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae
+                                        dignissim
+                                        nunc,
+                                        at dictum nibh. Donec justo
+                                        sem, aliquam id diam eget, dignissim congue tellus.
+                                    </li>
+                                </a>
+                                <a href="noticia.html" style="text-decoration: none;">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <span class="numero-mais-lida me-3">2</span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae
+                                        dignissim
+                                        nunc,
+                                        at dictum nibh. Donec justo
+                                        sem, aliquam id diam eget, dignissim congue tellus.
+                                    </li>
+                                </a>
+                                <a href="noticia.html" style="text-decoration: none;">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <span class="numero-mais-lida me-3">3</span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae
+                                        dignissim
+                                        nunc,
+                                        at dictum nibh. Donec justo
+                                        sem, aliquam id diam eget, dignissim congue tellus.
+                                    </li>
+                                </a>
+                                <a href="noticia.html" style="text-decoration: none;">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <span class="numero-mais-lida me-3">4</span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae
+                                        dignissim
+                                        nunc,
+                                        at dictum nibh. Donec justo
+                                        sem, aliquam id diam eget, dignissim congue tellus.
+                                    </li>
+                                </a>
+                                <a href="noticia.html" style="text-decoration: none;">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <span class="numero-mais-lida me-3">5</span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae
+                                        dignissim
+                                        nunc,
+                                        at dictum nibh. Donec justo
+                                        sem, aliquam id diam eget, dignissim congue tellus.
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="anuncio mt-2 mb-2">
+                    <a href="noticia.html">
+                        <img src="./imgs/anuncio4.jpg" class="img-fluid"
+                            style="max-width: 100%; max-height: 500px; object-fit: contain;" alt="Anúncio">
+                    </a>
+                </div>
+            </aside>
+            <div class="col-md-12">
+                <h3 class="mt-3 mb-4">Leia também</h3>
+                <div id="carouselLeiaTambem" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Primeira Slide -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img2.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img3.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img4.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segunda Slide -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img5.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img6.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img7.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="noticia.html" style="text-decoration: none;">
+                                            <div class="image-container">
+                                                <img src="./imgs/img8.jpg" class="card-img-top" alt="Lorem ipsum">
+                                            </div>
+                                            <div class="card-body">
+                                                <h6 class="card-categoria">Categoria</h6>
+                                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit.
+                                                </h5>
+                                                <p class="card-text" style="color: black">Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing
+                                                    elit.
+                                                    Maecenas
+                                                    vitae dignissim nunc, at dictum nibh. Donec justo sem, aliquam id
+                                                    diam
+                                                    eget,
+                                                    dignissim congue tellus.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles do Carrossel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeiaTambem"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLeiaTambem"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="./imgs/logo.png" style="height: 20%;">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor orci ac eros tincidunt, in
+                        iaculis velit fringilla. Vivamus pharetra nisl lorem. Vestibulum sit amet tempus eros, eu
+                        sagittis lorem. Praesent efficitur sit amet eros sit amet tristique. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="mb-2 mt-3">Informações legais</h4>
+                    <a href="" class="mt-4 mb-2 d-block">Termos de uso</a>
+                    <a href="" class="mt-4 mb-2 d-block">Políticas de Privacidade</a>
+                    <a href="" class="mt-4 mb-2 d-block">Lei de acesso à informação</a>
+                </div>
+
+                <div class="col-md-4 redes-sociais-footer">
+                    <h4 class="mb-2 mt-3">Redes Sociais</h4>
+                    <a href="" class="redes-sociais-footer mt-4 mb-2 d-block"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                    <a href="" class="redes-sociais-footer mt-4 mb-2 d-block"><i class="fa-brands fa-facebook"></i>
+                        Facebook</a>
+                    <a href="" class="redes-sociais-footer mt-4 mb-2 d-block"><i class="fa-brands fa-twitter"></i>
+                        Twitter</a>
+                </div>
+
+                <div class="col-md-12 segunda-linha-footer text-center">
+                    <div class="row">
+                        <div class="col-md-4 mt-5">
+                            <p>(11) 1234-5678</p>
+                        </div>
+                        <div class="col-md-4 mt-5">
+                            <p>(11) 6545-5678</p>
+                        </div>
+                        <div class="col-md-4 mt-5">
+                            <p>contato@ederluiz.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
