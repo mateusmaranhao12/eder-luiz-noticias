@@ -143,21 +143,14 @@ img {
     border-radius: 10px;
 }
 
-.img1 {
-    max-height: 100%;
-}
-
 .image-real-container {
     position: relative;
     width: 100%;
-    height: auto;
 }
 
 .image-real-container img {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover;
     filter: brightness(0.5);
     transition: filter 0.3s ease;
 }
@@ -166,34 +159,37 @@ img {
     filter: brightness(0.85);
 }
 
-/* Texto no topo da imagem */
-.image-real-container .text-overlay.top-left {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    z-index: 10;
+.img1 {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-/* Texto na parte inferior da imagem */
-.image-real-container .text-overlay.bottom p {
-    margin: 0;
+.text-overlay {
+    position: absolute;
+    color: white;
     width: 100%;
-    text-align: left;
-    /* Alinha o texto à esquerda */
-    box-sizing: border-box;
-    /* Garante que o padding não faça o texto sair da área da imagem */
-    overflow-wrap: break-word;
-    /* Garante que o texto não ultrapasse os limites */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding dentro do tamanho total */
+    overflow: hidden; /* Impede que o texto ultrapasse os limites do container */
 }
+
+.text-overlay.top-left {
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.text-overlay.bottom {
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .image-container {
     position: relative;
@@ -203,7 +199,7 @@ img {
 .image-container img {
     display: block;
     width: 100%;
-    filter: brightness(0.7);
+    filter: brightness(0.5);
     transition: filter 0.3s ease;
 }
 
@@ -274,12 +270,11 @@ img {
 }
 
 .responsive-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    max-width: 90%;
-    /* Limita a largura do texto */
-    word-wrap: break-word;
-    margin: 0 auto;
+    font-size: calc(1rem + 0.5vw); /* Escala o tamanho do texto com base no tamanho da tela */
+    line-height: 1.4; /* Define espaçamento entre linhas */
+    word-wrap: break-word; /* Garante que as palavras sejam quebradas, se necessário */
+    white-space: normal; /* Permite múltiplas linhas de texto */
+    overflow-wrap: break-word; /* Quebra palavras longas */
 }
 
 @media (max-width: 768px) {
