@@ -31,3 +31,26 @@ carouselEsportes.addEventListener('slide.bs.carousel', function (event) {
         }
     });
 });
+
+//Botao de pesquisa
+
+// Abrir o modal
+function abrirPesquisa() {
+    const modal = document.getElementById('modal-pesquisa')
+    modal.classList.remove('closing')
+    modal.classList.add('active')
+}
+
+// Fechar o modal
+function fecharPesquisa() {
+    const modal = document.getElementById('modal-pesquisa')
+    modal.classList.add('closing')
+
+    // Aguarda o fim da animação para esconder o modal
+    modal.addEventListener('animationend', () => {
+        if (modal.classList.contains('closing')) {
+            modal.classList.remove('active', 'closing')
+        }
+    }, { once: true })
+}
+

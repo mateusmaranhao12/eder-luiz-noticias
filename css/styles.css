@@ -170,8 +170,10 @@ img {
     color: white;
     width: 100%;
     padding: 10px;
-    box-sizing: border-box; /* Inclui padding dentro do tamanho total */
-    overflow: hidden; /* Impede que o texto ultrapasse os limites do container */
+    box-sizing: border-box;
+    /* Inclui padding dentro do tamanho total */
+    overflow: hidden;
+    /* Impede que o texto ultrapasse os limites do container */
 }
 
 .text-overlay.top-left {
@@ -270,11 +272,16 @@ img {
 }
 
 .responsive-text {
-    font-size: calc(1rem + 0.5vw); /* Escala o tamanho do texto com base no tamanho da tela */
-    line-height: 1.4; /* Define espaçamento entre linhas */
-    word-wrap: break-word; /* Garante que as palavras sejam quebradas, se necessário */
-    white-space: normal; /* Permite múltiplas linhas de texto */
-    overflow-wrap: break-word; /* Quebra palavras longas */
+    font-size: calc(1rem + 0.5vw);
+    /* Escala o tamanho do texto com base no tamanho da tela */
+    line-height: 1.4;
+    /* Define espaçamento entre linhas */
+    word-wrap: break-word;
+    /* Garante que as palavras sejam quebradas, se necessário */
+    white-space: normal;
+    /* Permite múltiplas linhas de texto */
+    overflow-wrap: break-word;
+    /* Quebra palavras longas */
 }
 
 @media (max-width: 768px) {
@@ -625,4 +632,123 @@ small {
     color: #000000;
     font-weight: bold;
     cursor: default;
+}
+
+/*Modal de pesquisa*/
+
+.modal-pesquisa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-pesquisa.active {
+    display: flex;
+    animation: bounceInDown 0.6s ease-in-out;
+    /* Animação ao aparecer */
+}
+
+.modal-pesquisa.closing {
+    animation: bounceOutUp 0.6s ease-in-out;
+    /* Animação ao fechar */
+    display: flex;
+    /* Garante que o modal fique visível até a animação terminar */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de Fechar */
+.btn-close-modal {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+}
+
+.btn-close-modal:hover {
+    color: #ff4444;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #0066ff;
+    outline: none;
+    color: #333;
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.search-box button {
+    background-color: #0066ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button i {
+    font-size: 1rem;
+}
+
+/*animacoes*/
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
 }

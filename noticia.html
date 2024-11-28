@@ -69,7 +69,7 @@
                     <li class="nav-item"><a class="nav-link" href="editoria.html">Vídeos</a></li>
                     <li class="nav-item"><a class="nav-link" href="editoria.html">Eventos</a></li>
                     <li class="nav-item"><a class="nav-link" href="editoria.html">Regiões</a></li>
-                    <li class="nav-item"><a class="nav-link" href="editoria.html"><i
+                    <li class="nav-item"><a style="cursor: pointer;" class="nav-link" onclick="abrirPesquisa()"><i
                                 class="fa-solid fa-magnifying-glass"></i></a>
                     </li>
                 </ul>
@@ -77,6 +77,22 @@
         </div>
         </div>
     </nav>
+
+    <!-- Modal de Pesquisa -->
+    <div id="modal-pesquisa" class="modal-pesquisa">
+        <div class="modal-content">
+            <!-- Caixa de Pesquisa -->
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar" />
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Botão de Fechar -->
+        <button class="btn-close-modal" onclick="fecharPesquisa()">&times;</button>
+    </div>
 
     <!-- Offcanvas Menu -->
     <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasMenu"
