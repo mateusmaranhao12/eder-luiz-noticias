@@ -446,6 +446,10 @@ small {
     color: black;
 }
 
+.ultimas-noticias .img-ultimas-noticias {
+    filter: brightness(0.65);
+}
+
 .ultimas-noticias .categoria {
     color: rgb(32, 0, 148);
     text-transform: uppercase;
