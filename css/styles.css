@@ -47,6 +47,18 @@ body {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+
 .carousel-section {
     margin-top: 20px;
 }
@@ -75,9 +87,11 @@ body {
     position: absolute;
     bottom: 5px;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza os controles horizontalmente */
+    transform: translateX(-50%);
+    /* Centraliza os controles horizontalmente */
     display: flex;
-    gap: 5px; /* Ajusta o espaço entre os indicadores */
+    gap: 5px;
+    /* Ajusta o espaço entre os indicadores */
 }
 
 .carousel-indicators-cards button {
@@ -86,20 +100,24 @@ body {
     border-radius: 50% !important;
     background-color: rgb(255, 255, 255, 0.4) !important;
     border: none !important;
-    transition: background-color 0.3s ease; /* Adiciona transição suave */
+    transition: background-color 0.3s ease;
+    /* Adiciona transição suave */
 }
 
 .carousel-indicators-cards .active {
-    background-color: #ffffff !important; /* Azul dinâmico para o indicador ativo */
+    background-color: #ffffff !important;
+    /* Azul dinâmico para o indicador ativo */
 }
 
 .carousel-indicators-cards-esportes {
     position: absolute;
     bottom: 5px;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza os controles horizontalmente */
+    transform: translateX(-50%);
+    /* Centraliza os controles horizontalmente */
     display: flex;
-    gap: 5px; /* Ajusta o espaço entre os indicadores */
+    gap: 5px;
+    /* Ajusta o espaço entre os indicadores */
 }
 
 .carousel-indicators-cards-esportes button {
@@ -108,11 +126,13 @@ body {
     border-radius: 50% !important;
     background-color: rgb(255, 255, 255, 0.4) !important;
     border: none !important;
-    transition: background-color 0.3s ease; /* Adiciona transição suave */
+    transition: background-color 0.3s ease;
+    /* Adiciona transição suave */
 }
 
 .carousel-indicators-cards-esportes .active {
-    background-color: #ffffff !important; /* Azul dinâmico para o indicador ativo */
+    background-color: #ffffff !important;
+    /* Azul dinâmico para o indicador ativo */
 }
 
 .carousel-inner img {
@@ -213,7 +233,8 @@ img {
 
 @media (max-width: 767px) {
     .fa-circle-play {
-        font-size: 1.5rem; /* Reduz o tamanho para telas pequenas */
+        font-size: 1.5rem;
+        /* Reduz o tamanho para telas pequenas */
     }
 }
 
