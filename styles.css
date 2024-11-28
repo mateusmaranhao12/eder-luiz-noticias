@@ -60,15 +60,59 @@ body {
 }
 
 .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ccc;
-    border: none;
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    background-color: #ccc !important;
+    border: none !important;
 }
 
 .carousel-indicators .active {
-    background-color: #007bff;
+    background-color: #007bff !important;
+}
+
+.carousel-indicators-cards {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza os controles horizontalmente */
+    display: flex;
+    gap: 5px; /* Ajusta o espaço entre os indicadores */
+}
+
+.carousel-indicators-cards button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    background-color: rgb(255, 255, 255, 0.4) !important;
+    border: none !important;
+    transition: background-color 0.3s ease; /* Adiciona transição suave */
+}
+
+.carousel-indicators-cards .active {
+    background-color: #ffffff !important; /* Azul dinâmico para o indicador ativo */
+}
+
+.carousel-indicators-cards-esportes {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza os controles horizontalmente */
+    display: flex;
+    gap: 5px; /* Ajusta o espaço entre os indicadores */
+}
+
+.carousel-indicators-cards-esportes button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    background-color: rgb(255, 255, 255, 0.4) !important;
+    border: none !important;
+    transition: background-color 0.3s ease; /* Adiciona transição suave */
+}
+
+.carousel-indicators-cards-esportes .active {
+    background-color: #ffffff !important; /* Azul dinâmico para o indicador ativo */
 }
 
 .carousel-inner img {
@@ -85,44 +129,50 @@ img {
 
 .image-real-container {
     position: relative;
-}
-
-.image-real-container img {
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     height: auto;
-}
-
-.image-real-container .text-overlay {
-    position: absolute;
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    padding: 5px;
-}
-
-.image-real-container .top-left {
-    top: 10px;
-    left: 10px;
-}
-
-.image-real-container .bottom {
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
 }
 
 .image-real-container img {
     display: block;
     width: 100%;
-    filter: brightness(0.7);
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.5);
     transition: filter 0.3s ease;
 }
 
 .image-real-container:hover img {
     filter: brightness(0.85);
+}
+
+/* Texto no topo da imagem */
+.image-real-container .text-overlay.top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+/* Texto na parte inferior da imagem */
+.image-real-container .text-overlay.bottom p {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    box-sizing: border-box;
+    /* Garante que o padding não faça o texto sair da área da imagem */
+    overflow-wrap: break-word;
+    /* Garante que o texto não ultrapasse os limites */
 }
 
 .image-container {
@@ -161,6 +211,12 @@ img {
     cursor: pointer;
 }
 
+@media (max-width: 767px) {
+    .fa-circle-play {
+        font-size: 1.5rem; /* Reduz o tamanho para telas pequenas */
+    }
+}
+
 .text-overlay.bottom {
     bottom: 10px;
     left: 50%;
@@ -193,6 +249,7 @@ img {
     color: rgb(49, 0, 112);
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 60%;
 }
 
 .responsive-text {
@@ -242,6 +299,18 @@ img {
 
 .redes-sociais .btn-outline-light {
     border-radius: 50px;
+}
+
+.redes-sociais .col-md-8 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.redes-sociais .btn {
+    padding: 8px 16px;
+    font-size: 14px;
 }
 
 .videos {
