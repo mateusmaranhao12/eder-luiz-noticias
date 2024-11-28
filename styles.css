@@ -301,7 +301,7 @@ small {
 }
 
 .saude-e-beleza h6 {
-    color:rgb(32, 0, 148);
+    color: rgb(32, 0, 148);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -325,16 +325,20 @@ small {
 }
 
 .saude-e-beleza .anuncio img {
-    height: 100%; /* Ocupa toda a altura disponível */
-    width: 100%; /* Mantém largura responsiva */
-    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+    height: 100%;
+    /* Ocupa toda a altura disponível */
+    width: 100%;
+    /* Mantém largura responsiva */
+    object-fit: cover;
+    /* Ajusta a imagem para preencher sem distorcer */
 }
 
-.saude-e-beleza  .anuncio {
+.saude-e-beleza .anuncio {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%; /* Ajusta a altura do contêiner ao restante da coluna */
+    height: 100%;
+    /* Ajusta a altura do contêiner ao restante da coluna */
 }
 
 .saude-e-beleza .col-md-4 {
@@ -342,7 +346,7 @@ small {
     flex-direction: column;
 }
 
-.saude-e-beleza .col-md-8 > .row {
+.saude-e-beleza .col-md-8>.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -360,7 +364,7 @@ small {
 }
 
 .esportes .card-categoria {
-    color:rgb(32, 0, 148);
+    color: rgb(32, 0, 148);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -374,13 +378,13 @@ small {
 }
 
 .ultimas-noticias .categoria {
-    color:rgb(32, 0, 148);
+    color: rgb(32, 0, 148);
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .ultimas-noticias .data {
-    color:rgb(117, 117, 117);
+    color: rgb(117, 117, 117);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -440,17 +444,17 @@ small {
 /*Noticia*/
 
 .texto-noticia .texto-categoria {
-    color:rgb(32, 0, 148);
+    color: rgb(32, 0, 148);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .texto-noticia .titulo {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .texto-noticia .paragrafo {
-    color:rgb(116, 116, 116);
+    color: rgb(116, 116, 116);
 }
 
 .noticia-redes-sociais {
@@ -489,7 +493,7 @@ small {
 }
 
 .noticia .card-categoria {
-    color:rgb(0, 0, 107);
+    color: rgb(0, 0, 107);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -498,3 +502,38 @@ small {
     color: black;
 }
 
+.capinzal {
+    border-bottom: 1px solid rgb(18, 0, 83);
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Espaçamento entre os itens */
+    flex-wrap: wrap;
+    /* Permite quebra de linha em telas pequenas */
+}
+
+.pagination-item {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-item:hover {
+    background-color: #cfcfcf;
+    color: #000000;
+}
+
+.pagination-item.active {
+    background-color: #cfcfcf;
+    color: #000000;
+    font-weight: bold;
+    cursor: default;
+}
