@@ -192,6 +192,16 @@ img {
     justify-content: center;
 }
 
+/* Estilo para telas de tablet (largura entre 768px e 1116px) */
+@media (min-width: 768px) and (max-width: 1116px) {
+    .text-overlay.bottom {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Preto com 50% de opacidade */
+        border-radius: 4px;
+        /* Borda arredondada opcional */
+    }
+
+}
 
 .image-container {
     position: relative;
@@ -415,6 +425,29 @@ small {
 .nossos-grupos {
     margin-bottom: 20px;
 }
+
+/* Estilo padrão: botões em pilha (um em cima do outro) */
+.nossos-grupos .row>div {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Ajuste para telas Android (largura menor ou igual a 480px) */
+@media (max-width: 480px) {
+    .nossos-grupos .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        /* Espaçamento entre os botões */
+    }
+
+    .nossos-grupos .row>div {
+        flex: 1;
+        /* Divide igualmente o espaço disponível */
+        margin-bottom: 0;
+    }
+}
+
 
 .saude-e-beleza .anuncio img {
     height: 100%;
