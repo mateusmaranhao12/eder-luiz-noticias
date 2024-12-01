@@ -1,7 +1,9 @@
+/*Body da aplicação*/
 body {
     background-color: rgb(245, 245, 245);
 }
 
+/*Navbar*/
 .navbar-custom {
     background-color: #00264e;
     padding: 20px;
@@ -58,7 +60,7 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
-
+/*Carousel*/
 .carousel-section {
     margin-top: 20px;
 }
@@ -138,6 +140,7 @@ img {
     border-radius: 10px;
 }
 
+/*Imagem maior*/
 .image-real-container {
     position: relative;
     width: 100%;
@@ -198,6 +201,7 @@ img {
 
 }
 
+/*Imagens menores*/
 .image-container {
     position: relative;
     display: inline-block;
@@ -261,6 +265,7 @@ img {
     object-fit: cover;
 }
 
+/*Cards*/
 .card {
     border: none;
 }
@@ -319,6 +324,7 @@ img {
     font-weight: 600;
 }
 
+/*Redes sociais*/
 .redes-sociais {
     background-color: #0b003d;
     color: white;
@@ -341,6 +347,7 @@ img {
     font-size: 14px;
 }
 
+/*Videos*/
 .videos {
     background-color: #2e2e2e;
     padding: 30px;
@@ -360,6 +367,7 @@ small {
     font-weight: 100;
 }
 
+/*Brasil e o mundo*/
 .brasil-e-o-mundo {
     background-color: #0e0042;
     color: white;
@@ -397,12 +405,7 @@ small {
     /* Cor ao passar o mouse */
 }
 
-.saude-e-beleza h6 {
-    color: rgb(32, 0, 148);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
+/*Nossos grupos*/
 .nossos-grupos {
     background-color: #0b003d;
     padding: 20px;
@@ -444,6 +447,13 @@ small {
 }
 
 
+/*Saude e beleza*/
+.saude-e-beleza h6 {
+    color: rgb(32, 0, 148);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .saude-e-beleza .anuncio img {
     height: 100%;
     /* Ocupa toda a altura disponível */
@@ -477,6 +487,7 @@ small {
     margin-bottom: 20px;
 }
 
+/*Esportes*/
 .esportes {
     background-color: #0e0042;
     color: white;
@@ -493,6 +504,7 @@ small {
     color: rgb(0, 0, 0);
 }
 
+/*Ultimas noticias*/
 .ultimas-noticias h2 {
     color: black;
 }
@@ -522,6 +534,7 @@ small {
     padding: 20px;
 }
 
+/*Footer*/
 .footer {
     background-color: rgb(24, 24, 24);
     padding: 20px;
