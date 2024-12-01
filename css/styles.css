@@ -109,31 +109,26 @@ body {
     /* Azul dinâmico para o indicador ativo */
 }
 
-.carousel-indicators-cards-esportes {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Centraliza os controles horizontalmente */
+/* Contêiner das bolinhas (indicadores) */
+.esportes .owl-dots {
+    text-align: center;
+    margin-top: 15px;
     display: flex;
-    gap: 5px;
-    /* Ajusta o espaço entre os indicadores */
+    justify-content: center;
 }
 
-.carousel-indicators-cards-esportes button {
-    width: 14px !important;
-    height: 14px !important;
-    border-radius: 50% !important;
-    background-color: rgb(255, 255, 255, 0.4) !important;
-    border: none !important;
+/* Estilo das bolinhas */
+.esportes .owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    /* Ajusta o espaço entre as bolinhas */
+    border-radius: 50%;
+    background-color: #ccc;
     transition: background-color 0.3s ease;
-    /* Adiciona transição suave */
+    border: 2px solid transparent;
 }
 
-.carousel-indicators-cards-esportes .active {
-    background-color: #ffffff !important;
-    /* Azul dinâmico para o indicador ativo */
-}
 
 .carousel-inner img {
     border-radius: 0px;

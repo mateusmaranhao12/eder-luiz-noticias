@@ -1,36 +1,74 @@
+//OWL Carousel Esportes
+$(document).ready(function () {
+    $('#carouselEsportes').owlCarousel({
+        loop: true,             // Ativa o loop contínuo
+        margin: 10,             // Espaçamento entre os slides
+        nav: false,             // Remove as setas de navegação
+        dots: true,             // Exibe apenas as bolinhas (indicadores)
+        autoplay: true,         // Ativa a reprodução automática
+        autoplayTimeout: 5000,  // Tempo entre os slides (5 segundos)
+        autoplayHoverPause: true, // Pausa ao passar o mouse sobre o carrossel
+        responsive: {
+            0: {                // Telas menores (até 576px)
+                items: 1        // Mostra 1 card por vez
+            },
+            768: {              // Telas médias (576px ou maior)
+                items: 2        // Mostra 2 cards por vez
+            },
+            992: {              // Telas grandes (992px ou maior)
+                items: 2        // Mostra 2 cards por vez
+            }
+        }
+    })
+
+    //Carousel Brasil e o Mundo
+    $('#carouselBrasilMundo').owlCarousel({
+        loop: true,             // Ativa o loop contínuo
+        margin: 10,             // Espaçamento entre os slides
+        nav: false,             // Remove as setas de navegação
+        dots: true,             // Exibe apenas as bolinhas (indicadores)
+        autoplay: true,         // Ativa a reprodução automática
+        autoplayTimeout: 5000,  // Tempo entre os slides (5 segundos)
+        autoplayHoverPause: true, // Pausa ao passar o mouse sobre o carrossel
+        responsive: {
+            0: {                // Telas menores (até 576px)
+                items: 1        // Mostra 1 card por vez
+            },
+            768: {              // Telas médias (576px ou maior)
+                items: 2        // Mostra 2 cards por vez
+            },
+            992: {              // Telas grandes (992px ou maior)
+                items: 2        // Mostra 2 cards por vez
+            }
+        }
+    })
+
+    //Carousel Leia Tambem
+    $('#carouselLeiaTambem').owlCarousel({
+        loop: true,             // Ativa o loop contínuo
+        margin: 10,             // Espaçamento entre os slides
+        nav: false,             // Remove as setas de navegação
+        dots: true,             // Exibe apenas as bolinhas (indicadores)
+        autoplay: true,         // Ativa a reprodução automática
+        autoplayTimeout: 5000,  // Tempo entre os slides (5 segundos)
+        autoplayHoverPause: true, // Pausa ao passar o mouse sobre o carrossel
+        responsive: {
+            0: {                // Telas menores (até 576px)
+                items: 1        // Mostra 1 card por vez
+            },
+            768: {              // Telas médias (576px ou maior)
+                items: 2        // Mostra 2 cards por vez
+            },
+            992: {              // Telas grandes (992px ou maior)
+                items: 2        // Mostra 2 cards por vez
+            }
+        }
+    })
+})
+
 function abrirAnuncio() {
-    window.location.href = "noticia.html"
+    window.location.href = 'noticia.html'
 }
-
-// Para o carrossel BrasilMundo
-const indicatorsBrasilMundo = document.querySelectorAll('.carousel-indicators-cards button');
-const carouselBrasilMundo = document.querySelector('#carouselBrasilMundo');
-
-carouselBrasilMundo.addEventListener('slide.bs.carousel', function (event) {
-    const index = event.to; // Índice do slide ativo
-    indicatorsBrasilMundo.forEach((indicator, i) => {
-        if (i === index) {
-            indicator.classList.add('active');
-        } else {
-            indicator.classList.remove('active');
-        }
-    });
-});
-
-// Para o carrossel Esportes
-const indicatorsEsportes = document.querySelectorAll('.carousel-indicators-cards-esportes button');
-const carouselEsportes = document.querySelector('#carouselEsportes');
-
-carouselEsportes.addEventListener('slide.bs.carousel', function (event) {
-    const index = event.to; // Índice do slide ativo
-    indicatorsEsportes.forEach((indicator, i) => {
-        if (i === index) {
-            indicator.classList.add('active');
-        } else {
-            indicator.classList.remove('active');
-        }
-    });
-});
 
 //Botao de pesquisa
 
