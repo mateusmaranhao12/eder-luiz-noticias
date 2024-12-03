@@ -1,6 +1,8 @@
 /*Body da aplicação*/
 body {
     background-color: rgb(245, 245, 245);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 
 /*Navbar*/
@@ -188,6 +190,131 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    text-align: center;
+}
+
+/* Estilo base para texto */
+.text-overlay.bottom .responsive-text {
+    color: white;
+}
+
+/*Imagem maior*/
+.image-real-container-new {
+    position: relative;
+    width: 100%;
+}
+
+.image-real-container-new img {
+    display: block;
+    width: 100%;
+    filter: brightness(0.5);
+    transition: filter 0.3s ease;
+}
+
+.image-real-container-new:hover img {
+    filter: brightness(0.85);
+}
+
+.img-new {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay-new {
+    position: absolute;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.text-overlay-new.top-left-new {
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.text-overlay-new-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fundo preto semi-transparente */
+}
+
+/* Estilo para o texto em dispositivos móveis */
+.responsive-text-new {
+    color: white;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Media query para telas móveis e iPads */
+@media (max-width: 1024px) {
+    .image-real-container-new {
+        position: relative;
+    }
+
+    /* Move o texto para baixo, com o fundo preto semi-transparente apenas em telas menores */
+    .text-overlay-new-bottom {
+        position: relative;
+        /* Sai da imagem e vai para baixo */
+        bottom: auto;
+        background: rgba(0, 0, 0, 0.7);
+        /* Fundo mais visível */
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* Ajuste o tamanho do texto em telas pequenas */
+    .responsive-text-new {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Media query para telas menores que 767px (celulares) */
+@media (max-width: 767px) {
+    .text-overlay-new-bottom {
+        position: relative;
+        bottom: auto;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .responsive-text-new {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/* Aumentar o tamanho do texto em telas menores */
+@media (max-width: 768px) {
+    .text-overlay.bottom .responsive-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
 }
 
 /* Estilo para telas de tablet (largura entre 768px e 1116px) */
@@ -197,6 +324,31 @@ img {
         /* Preto com 50% de opacidade */
         border-radius: 4px;
         /* Borda arredondada opcional */
+        font-size: 13px;
+    }
+
+    /* Garantir que os elementos ocupem toda a largura */
+    .col-md-8,
+    .col-md-4 {
+        flex: 0 0 100%;
+        /* Largura total */
+        max-width: 100%;
+        /* Garante a largura total */
+    }
+
+    /* Ajustes de margem para evitar grandes espaçamentos verticais */
+    .col-md-8.mt-4.mb-4,
+    .col-md-4.mb-4.mt-4 {
+        margin-top: 20px;
+        /* Margem superior ajustada */
+        margin-bottom: 20px;
+        /* Margem inferior ajustada */
+    }
+
+    /* Ajustes nos elementos dentro da imagem real-container */
+    .image-real-container {
+        margin-bottom: 30px;
+        /* Espaçamento entre os containers */
     }
 
 }
@@ -245,13 +397,7 @@ img {
     }
 }
 
-.text-overlay.bottom {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 18px;
-    text-align: center;
-}
+
 
 .image-container {
     width: 100%;
@@ -324,7 +470,7 @@ img {
     font-weight: 600;
 }
 
-/*Redes sociais*/
+/* Estilo padrão para a seção */
 .redes-sociais {
     background-color: #0b003d;
     color: white;
@@ -335,28 +481,29 @@ img {
     border-radius: 50px;
 }
 
-.redes-sociais .col-md-8 {
-    display: flex;
+.redes-sociais-botoes {
     justify-content: flex-end;
-    gap: 0.5rem;
-    align-items: center;
+    /* Alinha à direita (desktop) */
 }
 
-.redes-sociais .btn {
-    padding: 8px 16px;
-    font-size: 14px;
+/* Centralizar os botões em telas menores */
+@media (max-width: 768px) {
+    .redes-sociais-botoes {
+        justify-content: center;
+        /* Centraliza no mobile */
+    }
 }
 
 /*Videos*/
 .videos {
     background-color: #2e2e2e;
-    padding: 30px;
 }
 
 .videos h6,
 small {
     color: white;
     font-weight: bold;
+    padding-top: 30px;
 }
 
 .videos span {
@@ -410,6 +557,8 @@ small {
     background-color: #0b003d;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .nossos-grupos h4 {
@@ -418,10 +567,19 @@ small {
 
 .nossos-grupos .btn-outline-light {
     border-radius: 50px;
+    width: 100%;
+    /* Garante largura uniforme para os botões */
+    max-width: 200px;
+    /* Define um limite de largura */
+    margin: 0 auto;
+    /* Centraliza o botão dentro do pai */
 }
 
-.nossos-grupos {
-    margin-bottom: 20px;
+.nossos-grupos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
 }
 
 /* Estilo padrão: botões em pilha (um em cima do outro) */
@@ -436,7 +594,6 @@ small {
         display: flex;
         justify-content: space-between;
         gap: 10px;
-        /* Espaçamento entre os botões */
     }
 
     .nossos-grupos .row>div {
@@ -445,7 +602,6 @@ small {
         margin-bottom: 0;
     }
 }
-
 
 /*Saude e beleza*/
 .saude-e-beleza h6 {
@@ -532,6 +688,17 @@ small {
 .card-ultimas-noticias {
     background-color: #FFF;
     padding: 20px;
+}
+
+@media (max-width: 1024px) {
+
+    .col-md-3,
+    .col-md-9 {
+        flex: 0 0 100%;
+        /* Faz a coluna ocupar 100% da largura */
+        max-width: 100%;
+        /* Garante que ocupe 100% da largura */
+    }
 }
 
 /*Footer*/

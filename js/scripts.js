@@ -1,66 +1,54 @@
 //OWL Carousel Esportes
 $(document).ready(function () {
     $('#carouselEsportes').owlCarousel({
-        loop: true,             // Ativa o loop contínuo
-        margin: 10,             // Espaçamento entre os slides
-        nav: false,             // Remove as setas de navegação
-        dots: true,             // Exibe apenas as bolinhas (indicadores)
-        autoplay: true,         // Ativa a reprodução automática
-        autoplayTimeout: 5000,  // Tempo entre os slides (5 segundos)
-        autoplayHoverPause: true, // Pausa ao passar o mouse sobre o carrossel
+        loop: true,  // Permite rotação infinita
+        margin: 10,  // Espaço entre os itens
+        nav: false,   // Exibe os botões de navegação
         responsive: {
-            0: {                // Telas menores (até 576px)
-                items: 1        // Mostra 1 card por vez
+            0: {
+                items: 1  // Exibe 1 item em telas de celular
             },
-            768: {              // Telas médias (576px ou maior)
-                items: 2        // Mostra 2 cards por vez
+            768: {
+                items: 2  // Exibe 2 itens em telas de iPad (min-width: 768px)
             },
-            992: {              // Telas grandes (992px ou maior)
-                items: 2        // Mostra 2 cards por vez
+            1116: {
+                items: 4  // Exibe 4 itens em telas de computador (min-width: 1024px)
             }
         }
     })
 
     //Carousel Brasil e o Mundo
     $('#carouselBrasilMundo').owlCarousel({
-        loop: true,             // Ativa o loop contínuo
-        margin: 10,             // Espaçamento entre os slides
-        nav: false,             // Remove as setas de navegação
-        dots: true,             // Exibe apenas as bolinhas (indicadores)
-        autoplay: true,         // Ativa a reprodução automática
-        autoplayTimeout: 5000,  // Tempo entre os slides (5 segundos)
-        autoplayHoverPause: true, // Pausa ao passar o mouse sobre o carrossel
+        loop: true,  // Permite rotação infinita
+        margin: 10,  // Espaço entre os itens
+        nav: false,   // Exibe os botões de navegação
         responsive: {
-            0: {                // Telas menores (até 576px)
-                items: 1        // Mostra 1 card por vez
+            0: {
+                items: 1  // Exibe 1 item em telas de celular
             },
-            768: {              // Telas médias (576px ou maior)
-                items: 2        // Mostra 2 cards por vez
+            768: {
+                items: 2  // Exibe 2 itens em telas de iPad (min-width: 768px)
             },
-            992: {              // Telas grandes (992px ou maior)
-                items: 2        // Mostra 2 cards por vez
+            1116: {
+                items: 4  // Exibe 4 itens em telas de computador (min-width: 1024px)
             }
         }
     })
 
     //Carousel Leia Tambem
     $('#carouselLeiaTambem').owlCarousel({
-        loop: true,             // Ativa o loop contínuo
-        margin: 10,             // Espaçamento entre os slides
-        nav: false,             // Remove as setas de navegação
-        dots: true,             // Exibe apenas as bolinhas (indicadores)
-        autoplay: true,         // Ativa a reprodução automática
-        autoplayTimeout: 5000,  // Tempo entre os slides (5 segundos)
-        autoplayHoverPause: true, // Pausa ao passar o mouse sobre o carrossel
+        loop: true,  // Permite rotação infinita
+        margin: 10,  // Espaço entre os itens
+        nav: false,   // Exibe os botões de navegação
         responsive: {
-            0: {                // Telas menores (até 576px)
-                items: 1        // Mostra 1 card por vez
+            0: {
+                items: 1  // Exibe 1 item em telas de celular
             },
-            768: {              // Telas médias (576px ou maior)
-                items: 2        // Mostra 2 cards por vez
+            768: {
+                items: 2  // Exibe 2 itens em telas de iPad (min-width: 768px)
             },
-            992: {              // Telas grandes (992px ou maior)
-                items: 2        // Mostra 2 cards por vez
+            1116: {
+                items: 4  // Exibe 4 itens em telas de computador (min-width: 1024px)
             }
         }
     })
@@ -69,8 +57,6 @@ $(document).ready(function () {
 function abrirAnuncio() {
     window.location.href = 'noticia.html'
 }
-
-//Botao de pesquisa
 
 // Abrir o modal
 function abrirPesquisa() {
